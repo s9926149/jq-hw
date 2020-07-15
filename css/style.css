@@ -100,21 +100,55 @@ body {
 
 .nav {
     display: flex;
+    position: relative;
     align-items: center;
 }
 
 .nav li a {
     display: block;
     font-size: 14px;
-    padding: 18px 10px;
-    margin: 0 20px;
+    padding: 18px 30px;
+    text-align: center;
     text-decoration: none;
     color: rgb(0, 204, 153);
+}
+
+.nav li a:hover, .nav li a.active {
+    background-color: #CCCCCC;
+    color: rgb(0, 244, 183);
 }
 
 .nav li a.navActive {
     padding-bottom: 16px;
     border-bottom: 2px solid rgb(0, 204, 153);
+}
+
+.prodList {
+    display: none;
+    position: absolute;
+    top: 100%;
+    width: 116px;
+    z-index: 100;
+    box-sizing: border-box;
+    border: 1px solid black;
+}
+
+.prodIntro:hover .prodList, .prodIntro.active .prodList {
+    display: block;
+}
+
+.prodList li {
+    border-bottom: 1px solid black;
+}
+
+.prodList li:last-child {
+    border-bottom: none;
+}
+
+.prodList li a {
+    background-color: #fff;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 /* ====== */

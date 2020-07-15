@@ -25,4 +25,11 @@ $(function () {
         event.preventDefault();
         $('html,body').animate({ scrollTop: 0}, 750);
     });
+
+    // setup productList menu
+    $('.prodIntro').click(
+        function (event) {
+            $(this).toggleClass("active")
+        }
+    );
 });
