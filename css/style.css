@@ -1,0 +1,384 @@
+body {
+    font-family: sans-serif;
+}
+
+.wrap {
+    width: 1000px;
+    margin: 0 auto;
+}
+
+/* =========== */
+/* upperHeader */
+/* =========== */
+
+.upperHeader {
+    padding-right: 15px;
+    background-color: rgb(246, 246, 246);
+}
+
+.upperHeader ul {
+    font-size: 16px;
+    padding: 6px 0;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+#fbLink {
+    color: rgb(68, 96, 160);
+}
+
+.upperHeader ul li:first-child a::after {
+    content: "";
+    display: block;
+    width: 1px;
+    height: 16px;
+    margin: 0 8px;
+    background-color: rgb(204, 204, 204);
+}
+
+.divideBar {
+    width: 1px;
+    height: 16px;
+    margin: 0 8px;
+    background-color: rgb(204, 204, 204);
+}
+
+#twLink {
+    color: rgb(33, 180, 237);
+}
+
+.upperHeader a {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+.upperHeader img {
+    margin-right: 3px;
+}
+
+/* =========== */
+/* lowerHeader */
+/* =========== */
+
+.lowerHeader {
+    /* height: 50px; */
+    display: flex;
+    justify-content: space-between;
+}
+
+.lowerHeader h1 a {
+    display: block;
+    background-image: url(../images/logo.png);
+    width: 224px;
+    height: 100%;
+    text-indent: 101%;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.nav > li > a {
+    display: block;
+    font-size: 14px;
+    padding: 18px 10px;
+    margin: 0 20px;
+    text-decoration: none;
+    color: rgb(0, 204, 153);
+}
+
+.nav > li > a.navActive {
+    padding-bottom: 16px;
+    border-bottom: 2px solid rgb(0, 204, 153);
+}
+
+.nav > li:hover {
+    background-color: #CCCCCC;
+}
+
+.nav > li > a:hover {
+    color: rgb(34, 255, 200);
+}
+
+.nav > li:first-child > a:hover {
+    border-bottom: 2px solid rgb(34, 255, 200);
+}
+
+.prodList {
+    display: none;
+    width: 116px;
+    border: 1px solid black;
+    position: absolute;
+    top: 50px;
+    right: 115px;
+    z-index: 200;
+    background-color: #fff;
+}
+
+.nav li:nth-child(2):hover .prodList {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.prodList > li {
+    width: 100%;
+}
+
+.prodList > li > a {
+    display: block;
+    text-align: center;
+    box-sizing: border-box;
+    font-size: 14px;
+    padding: 18px 2px;
+    text-decoration: none;
+    color: rgb(0, 204, 153);
+    border-bottom: 1px solid black;
+}
+
+.prodList > li > a:hover {
+    background-color: #CCCCCC;
+    color: rgb(34, 255, 200);
+}
+
+.prodList > li:last-child > a {
+    border-bottom: none;
+}
+
+/* ====== */
+/* banner */
+/* ====== */
+
+.banner {
+    height: 346px;
+    position: relative;
+    /* background-image: url(../images/banner.png); */
+}
+
+.slogan {
+    box-sizing: border-box;
+    position: absolute;
+    top: 93px;
+    width: 100%;
+    height: 160px;
+    background: rgba(0, 0, 0, 0.15);
+    
+    padding: 40px 20px;
+    z-index: 100;
+}
+
+.slogan h2 {
+    color: white;
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+/* =========== */
+/* courseIntro */
+/* =========== */
+
+.courseIntro {
+    margin: 64px 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+.course {
+    box-sizing: border-box;
+    width: 300px;
+    height: 330px;
+    padding: 25px 18px;
+    border-radius: 3px;
+    box-shadow: 0 3px 3px silver;
+}
+
+.course .imgContainer {
+    height: 150px;
+    margin-bottom: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.course h3 {
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.course p {
+    font-size: 14px;
+    line-height: 1.5;
+    text-align: justify;
+}
+
+.course ul li {
+    list-style-type: square;
+
+    /* indent 在 Fx 上不會連 list marker 一起縮排，用 padding 的話 marker 還是會在外面*/
+    /* text-indent: 14px; */
+    margin-left: 14px;
+
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+/* ========== */
+/* comparison */
+/* ========== */
+
+.comparison {
+    font-size: 14px;
+    line-height: 2.5;
+}
+
+.comparison h3 {
+    font-size: 22px;
+    line-height: 1;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.comparison table {
+    width: 100%;
+    margin-bottom: 60px;
+}
+
+.comparison thead tr {
+    background-color: rgb(247, 247, 247);
+}
+
+.comparison th, .comparison td {
+    border-top: 1px solid rgb(221, 221, 221);
+    border-bottom: 1px solid rgb(221, 221, 221);
+    padding: 0 24px;
+}
+
+.comparison th {
+    text-align: left;
+}
+
+.comparison thead th {
+    font-weight: bold;
+}
+
+.comparison .highlight {
+    color: rgb(0, 166, 125);
+}
+
+/* ========= */
+/* contactUs */
+/* ========= */
+
+.contactUs {
+    box-sizing: border-box;
+    height: 400px;
+    margin-bottom: 25px;
+    padding: 36px 18px 30px 18px;
+    background: linear-gradient(rgb(0, 100, 75), rgb(0, 152, 144));
+}
+
+.contactUs p {
+    text-align: center;
+    font-size: 22px;
+    line-height: 1;
+    margin-bottom: 14px;
+    color: white;
+}
+
+.contactUs form {
+    margin-top: 18px;
+    display: flex;
+}
+
+.contactUs form textarea {
+    box-sizing: border-box;
+    width: 460px;
+    height: 250px;
+    border-radius: 3px;
+}
+
+.contactInfo {
+    margin-right: 2px;
+    margin-left: 38px;
+}
+
+.field {
+    margin-bottom: 10px;
+}
+
+.field label, .field input {
+    display: block;
+}
+
+.field label {
+    line-height: 1;
+    padding: 6px 0;
+    color: white;
+    font-size: 14px;
+}
+
+.field input {
+    box-sizing: border-box;
+    width: 460px;
+    border: 1px solid silver;
+    border-radius: 3px;
+    padding: 10px;
+    font-size: 12px;
+}
+
+.contactInfo button {
+    display: block;
+    width: 70px;
+    padding: 2px 0;
+    font-size: 14px;
+    line-height: 2;
+    text-align: center;
+    border: 0;
+    border-radius: 3px;
+    background-color: rgb(0, 204, 153);
+    color: white;
+    margin-top: 12px;
+    margin-left: auto;
+}
+
+.contactInfo button:hover {
+    background-color: rgb(0, 147, 107);
+    cursor: pointer;
+}
+
+.contactInfo button:active {
+    background-color: rgb(0, 90, 61);
+}
+
+/* ====== */
+/* footer */
+/* ====== */
+
+.footer {
+    padding: 0 20px;
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    font-size: 14px;
+    line-height: 1;
+}
+
+.footer div p a {
+    color: rgb(224, 45, 128);
+}
