@@ -1,6 +1,3 @@
-
-
-
 $(function () {
     // lightbox settings
     lightbox.option({
@@ -27,9 +24,9 @@ $(function () {
     });
 
     // setup productList menu
-    $('.prodIntro').click(
+    $('.prodIntro > a').click(
         function (event) {
-            $(this).toggleClass("active")
+            $(this).parent().toggleClass("active")
         }
     );
 });
