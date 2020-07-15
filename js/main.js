@@ -1,13 +1,16 @@
+
+
+
 $(function () {
     // lightbox settings
     lightbox.option({
         positionFromTop: 200,
     });
 
-    // swiper settings
+    // setup swiper
     var mySwiper = new Swiper('.swiper-container', {
         loop: true,
-
+        
         pagination: {
             el: '.swiper-pagination',
         },
@@ -17,11 +20,9 @@ $(function () {
         },
     });
 
-    // setup prodList menu
-    // $(".prodListButton").click(
-    //     function(event) {
-    //         event.preventDefault();
-    //         $(".prodList").toggleClass("active");
-    //     }
-    // );
+    // setup scroll to top button
+    $('.toTop').click(function (event) {
+        event.preventDefault();
+        $('html,body').animate({ scrollTop: 0}, 750);
+    });
 });
